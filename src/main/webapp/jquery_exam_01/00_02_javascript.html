@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>순수 자바스크립트</title>
+	<style>
+	
+	</style>
+	<!-- 모든 요소들이 렌더링되고 난 후에 자바스크립트 실행 -->
+	<script type="text/javascript">
+		// id가 "abc"인 요소의 참조 주소 얻기
+		// document.getElementById("abc")를 호출하고자 한다면 body가 생성된 이후에 호출해야함
+		// 생성되기 전에 호출함으로서 오류 생성. 오류를 방지하고자 한다면 jQuery 사용
+		let paragraph=document.getElementById("abc");
+		// paragraph은 문단을 의미하며 <p></p>를 의미
+		
+		// id가 "abc"인 요소에 스타일 적용
+		paragraph.style.color="blue";
+		
+		// input 값을 가져와서 얼럿 띄워줌
+		let language=document.getElementById("lang").value;
+		alert(language);
+	</script>
+</head>
+<body>
+	<p id="abc">1. 나는 파란색 color가 적용되어있다.</p>
+	<input type="text" id="lang" name="lang" value="한글"/>
+</body>
+</html>
